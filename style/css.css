@@ -1,0 +1,97 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: capitalize;
+    background-color: #eeeeee42;
+}
+
+.container {
+    margin-top: 20%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* product */
+
+.product {
+    position: relative;
+    transition: 0.8s;
+    overflow: hidden;
+    height: 340px;
+}
+
+.product::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #0d6efd;
+    height: 100%;
+    width: 100%;
+    clip-path: circle(150px at 70% 20%);
+    transition: 0.8s;
+    z-index: -10;
+}
+
+.product:hover:after {
+    clip-path: circle(150px at 100% 4%);
+}
+
+
+/* img */
+
+img {
+    transform: translate(00px, 60%);
+    width: 100%;
+    z-index: 1;
+    transition: 0.8s;
+}
+
+.product:hover img {
+    transform: translate(00px, 00%);
+    width: 75%;
+}
+
+
+/* buttons color size */
+
+.color,
+.size {
+    display: flex;
+    align-items: baseline;
+    transition: 0.8s;
+    transform: translate(0px, 150px);
+}
+
+.size .col,
+.color .col {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.size .col button,
+.color .col button {
+    transform: translateY(-7px);
+}
+
+.product:hover .color {
+    transform: translate(0px, 0px);
+}
+
+.product:hover .size {
+    transform: translate(0px, 0px);
+}
+
+
+/* button buy */
+
+.buy {
+    transform: translate(45px, 180px);
+    width: 50%;
+    transition: 0.8s;
+}
+
+.product:hover .buy {
+    width: 50%;
+    transform: translate(45%, 0px);
+}
