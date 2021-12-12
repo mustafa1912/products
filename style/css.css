@@ -8,6 +8,8 @@ body {
     margin-top: 20%;
     margin-right: auto;
     margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 
@@ -17,7 +19,8 @@ body {
     position: relative;
     transition: 0.8s;
     overflow: hidden;
-    height: 340px;
+    height: 350px;
+    width: 350px;
 }
 
 .product::after {
@@ -41,7 +44,7 @@ body {
 /* img */
 
 img {
-    transform: translate(00px, 60%);
+    transform: translate(00px, 50%);
     width: 100%;
     z-index: 1;
     transition: 0.8s;
